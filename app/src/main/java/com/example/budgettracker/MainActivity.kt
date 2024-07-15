@@ -7,7 +7,7 @@ import android.widget.*
 
 class MainActivity : AppCompatActivity() {
     private var totalFood = 0
-    private var totalEntertainment = 0
+    private var totalRent = 0
     private var totalTransportation = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         val amountEditText: EditText = findViewById(R.id.etAmount)
         val resultTextView: TextView = findViewById(R.id.tvResult)
 
-        val categories = arrayOf("Food", "Entertainment", "Transportation")
+        val categories = arrayOf("Food", "Rent", "Transportation")
         categorySpinner.adapter = ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, categories)
 
         addButton.setOnClickListener {
@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
             if (amount != null) {
                 when (selectedCategory) {
                     "Food" -> totalFood += amount
-                    "Entertainment" -> totalEntertainment += amount
+                    "Rent" -> totalRent+= amount
                     "Transportation" -> totalTransportation += amount
                 }
                 updateResultTextView(resultTextView)
@@ -50,6 +50,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun updateResultTextView(textView: TextView) {
-        textView.text = "Food: $totalFood\nEntertainment: $totalEntertainment\nTransportation: $totalTransportation"
+        textView.text = "Food: $totalFood\nRent: $totalRent\nTransportation: $totalTransportation"
     }
 }

@@ -11,10 +11,13 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginBottom="16dp"
         android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/etAmount"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextText2" />
 
     <EditText
         android:id="@+id/etAmount"
@@ -32,23 +35,40 @@
         android:id="@+id/btnAddExpense"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="16dp"
         android:text="Add Expense"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etAmount"
-        android:layout_margin="16dp"
-        />
+        app:layout_constraintTop_toBottomOf="@id/etAmount" />
 
     <TextView
         android:id="@+id/tvResult"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Food: 0\nEntertainment: 0\nTransportation: 0"
+        android:layout_margin="16dp"
+        android:text="Food: 0\nRent: 0\nTransportation: 0"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnAddExpense"
-        android:layout_margin="16dp"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/btnAddExpense" />
+
+    <EditText
+        android:id="@+id/editTextText2"
+        android:layout_width="244dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="89dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="112dp"
+        android:ems="10"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:text="Budget Tracker"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.176"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
